@@ -4,13 +4,15 @@ namespace Database\Seeders;
 
 use App\Models\Campaign;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class CampaignSeeder extends Seeder
 {
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
         Campaign::truncate();
-
+        Schema::enableForeignKeyConstraints();
         Campaign::create([
             'timezone' => 'Europe/London',
             'name' => 'Test Campaign 1',
