@@ -12,6 +12,11 @@
     'value' => old('description') ?? $prize->description,
 ])
 
+@include('backstage.partials.image-container',[
+    'label'=>"Image",
+    'image'=>$prize->image
+])
+
 @include('backstage.partials.forms.number', [
     'field' => 'weight',
     'label' => 'Weight',

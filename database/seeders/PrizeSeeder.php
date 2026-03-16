@@ -5,12 +5,15 @@ namespace Database\Seeders;
 use App\Models\Campaign;
 use App\Models\Prize;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class PrizeSeeder extends Seeder
 {
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
         Prize::truncate();
+        Schema::enableForeignKeyConstraints();
 
         $campaigns = Campaign::all();
 
