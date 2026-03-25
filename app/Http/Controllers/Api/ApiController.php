@@ -19,7 +19,6 @@ class ApiController extends Controller
          * - Use the database layer to store and manage all game-related data, including game state and prize counts.
          * - Cache is used here only for demonstration purposes and should be replaced with proper database storage.
          */
-
         $currentMove = (Cache::get(request('gameId')) ?? 0) + 1;
         Cache::put(request('gameId'), $currentMove);
 

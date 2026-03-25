@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Campaign;
 use App\Models\Prize;
-use Exception;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
