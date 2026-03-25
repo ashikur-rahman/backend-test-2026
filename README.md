@@ -1,4 +1,4 @@
-# Thunderbite Backend Test
+# Xtremepush Backend Test
 
 This test evaluates your Laravel development skills with a focus on problem-solving,
 code quality, and attention to detail.
@@ -15,7 +15,7 @@ code quality, and attention to detail.
 8. Visit `/backstage` in your browser
 
 Login credentials:
-- Email: `test@thunderbite.com`
+- Email: `test@xtremepush.com`
 - Password: `test123`
 
 ---
