@@ -10,12 +10,13 @@ class Game extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['campaign_id', 'prize_id', 'account', 'segment', 'finished_at'];
+    protected $fillable = ['campaign_id', 'prize_id', 'account', 'segment', 'finished_at', 'revealed_tiles', 'moves', 'should_win'];
 
     protected function casts(): array
     {
         return [
             'finished_at' => 'datetime',
+            'revealed_tiles' => 'json',
         ];
     }
 

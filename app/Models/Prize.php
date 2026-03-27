@@ -14,6 +14,8 @@ class Prize extends Model
         'segment',
         'weight',
         'image',
+        'daily_limit',
+        'daily_won',
         'starts_at',
         'ends_at',
     ];
