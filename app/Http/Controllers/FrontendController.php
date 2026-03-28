@@ -13,7 +13,7 @@ class FrontendController extends Controller
         $account = request('a');
         $segment = request('segment', 'low');
 
-        // 🔥 Campaign validity
+        // Campaign validity
         if (now() < $campaign->starts_at) {
             return view('frontend.index', [
                 'config' => json_encode(["message" => "Campaign not started"])
@@ -28,7 +28,7 @@ class FrontendController extends Controller
             ]);
         }
 
-        // 🔥 Find unfinished game
+        // Find unfinished game
         $game = Game::where('campaign_id', $campaign->id)
             ->where('account', $account)
             ->whereNull('finished_at')
